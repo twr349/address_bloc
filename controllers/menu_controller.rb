@@ -61,7 +61,7 @@ require_relative '../models/address_book'
     system "clear"
   else
    puts "#{selection} not valid"
-   main_menu
+   view_entry_number
    
   end
  end
