@@ -15,6 +15,7 @@ require_relative '../models/address_book'
     puts "4 - Import entries from a CSV"
     puts "5 - View Entry Number"
     puts "6 - Exit"
+    puts "9 - Detonate all entries"
     print "Enter your selection: "
     
     selection = gets.to_i
@@ -43,6 +44,14 @@ require_relative '../models/address_book'
        when 6
          puts "Good-bye!"
          exit(0)
+       when 9
+         system "clear"
+         puts "3"
+         puts "2"
+         puts "1"
+         puts "BOOM!"
+         @address_book.detonate_entries
+         main_menu
        else
          system "clear"
          puts "Sorry, that is not a valid input"
@@ -78,6 +87,8 @@ require_relative '../models/address_book'
   puts "End of entries"
   
  end
+ 
+ 
  
  def create_entry
   
